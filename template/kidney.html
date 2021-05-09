@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class="row">
+    <div class="col-md-6 mx-auto shadow-lg card py-3 ">
+        <form action="{% url 'result' %}">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="exampleInputPassword1">age</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="age" placeholder="age" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">bp</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="bp" placeholder="bp" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">al</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="al" placeholder="al" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">pcc</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="pcc" placeholder="pcc" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">bgr</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="bgr" placeholder="bgr" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">bu</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="bu" placeholder="bu" required>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">sc</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="sc" placeholder="sc" required>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">hemo</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="hemo" placeholder="hemo" required>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">pcv</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="pcv" placeholder="pcv" required>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">htn</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="htn" placeholder="htn" required>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">dm</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="dm" placeholder="dm" required>
+
+            </div>            
+            <div class="form-group">
+                <label for="exampleInputPassword1">appet</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="appet" placeholder="appet" required>
+
+            </div>            
+            <div class="form-group">
+                <!-- <label for="exampleInputPassword1">class</label> -->
+                <input type="submit" class="form-control btn-outline-success my-3" id="exampleInputPassword1" name="kidney" placeholder="submit" required>
+
+            </div>
+
+            
+
+
+        </form>
+
+
+
+       
+    </div>
+
+</div>
+{%endblock%}

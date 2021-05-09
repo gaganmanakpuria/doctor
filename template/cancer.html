@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class=" row ">
+    <div class=" col-md-8 mx-auto py-3 card shadow-lg my-2">
+        <H1> CANCER PREDICTION</H1>
+        <form  action=" {% url 'result'%}">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="exampleInputPassword1">Radius_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="radius_mean" placeholder="radius_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Texture_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="texture_mean" placeholder="Texture_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Perimeter_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="perimeter_mean" placeholder="Perimeter_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Area_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="area_mean" placeholder="Area_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Smoothness_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="smoothness_mean" placeholder="smoothness_mean" required  >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Compactness_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="compactness_mean" placeholder="compactness_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Concavity_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavity_mean" placeholder="concavity_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Concave points_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavepoints_mean" placeholder="concave points_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Symmetry_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="symmetry_mean" placeholder="symmetry_mean" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">fractal_dimension_mean</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="fractal_dimension_mean" placeholder="fractal_dimension_mean" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">radius_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="radius_se" placeholder="radius_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">texture_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="texture_se" placeholder="texture_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">perimeter_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="perimeter_se" placeholder="perimeter_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">area_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="area_se" placeholder="area_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">smoothness_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="smoothness_se" placeholder="smoothness_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">compactness_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="compactness_se" placeholder="compactness_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">concavity_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavity_se" placeholder="concavity_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">concave points_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavepoints_se" placeholder="concave points_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">symmetry_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="symmetry_se" placeholder="symmetry_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">fractal_dimension_se</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="fractal_dimension_se" placeholder="fractal_dimension_se" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">radius_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="radius_worst" placeholder="radius_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">texture_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="texture_worst" placeholder="texture_worst" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">perimeter_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="perimeter_worst" placeholder="perimeter_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">area_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="area_worst" placeholder="area_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">smoothness_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="smoothness_worst" placeholder="smoothness_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">compactness_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="compactness_worst" placeholder="compactness_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">concavity_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavity_worst" placeholder="concavity_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">concave points_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="concavepoints_worst" placeholder="concave points_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">symmetry_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="symmetry_worst" placeholder="symmetry_worst" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">fractal_dimension_worst</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="exampleInputPassword1">fractal_dimension_worst</label> -->
+                <!-- <input type="text" class="form-control" id="exampleInputPassword1" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required> -->
+                <input type="submit" class="form-control btn-success btn my-3" name="cancer">
+
+            </div>
+   
+           
+
+        </form>
+
+    </div>
+
+</div>
+{%endblock%}

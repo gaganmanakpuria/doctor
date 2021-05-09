@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class="row">
+    <div class="col-md-5 mx-auto card shadow shadow-sm py-3">
+        <h1>BMI with ml </h1>
+        <form action="{%url 'result' %}">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="exampleInputPassword1">Gender</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Gender" placeholder="Gender for female 1 and male for 0 " required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Height</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Height" placeholder="Height in cm" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Weight</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Weight" placeholder="Weight in kg " required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="exampleInputPassword1">Weight</label> -->
+                <input type="submit" class="form-control btn-outline-success my-3" id="exampleInputPassword1" name="bmi"  required>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+{%endblock%}

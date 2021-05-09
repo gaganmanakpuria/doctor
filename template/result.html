@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class="row">
+    <div class="col-md-8 mx-auto card">
+        <h1 class="text-center"> REPORT </h1>
+
+        {% if bmi %}
+        <h2>Your weight is  {{bmi}}.</h2>
+        {%else%}
+        {%endif%}
+
+
+        {% if diabeates %}
+        <h2 class=" text-center"> You are {{diabeates}} with diabeates.</h2>
+        {%else%}
+        {%endif%}
+
+        {% if cancer %}
+        <h2 class=" text-center"> You are {{cancer}} with Breast Cancer.</h2>
+        {%else%}
+        {%endif%}
+
+        {% if kidney %}
+        <h2 class=" text-center"> You are {{kidney}} .</h2>
+        {%else%}
+        {%endif%}
+
+    </div>
+
+</div>
+{%endblock%}

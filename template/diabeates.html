@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class="row">
+    <div class="col-md-6 mx-auto card shadow shadow-lg py-3">
+        <form action="{%url 'result'%}">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="exampleInputPassword1">Pregnancies</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Pregnancies" placeholder="Pregnancies" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">Glucose</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Glucose" placeholder="Glucose" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">BloodPressure</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="BloodPressure" placeholder="BloodPressure" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">SkinThickness</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="SkinThickness" placeholder="SkinThickness" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Insulin</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Insulin" placeholder="Insulin" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">BMI</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="BMI" placeholder="BMI" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">DiabetesPedigreeFunction</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Age</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="Age" placeholder="Age" required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="exampleInputPassword1">Age</label> -->
+                <input type="submit" class="form-control btn-outline-success my-2" id="exampleInputPassword1" name="diabeates" placeholder="Submit" required>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+{%endblock%}

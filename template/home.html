@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body%}
+<div class="row mx-3 mt-5">
+  <div class="col-md-12 shadow shadow-sm animate__animated animate__slideInUp  " style="background: url('/static/website_images/doctor.jpg');background-size: 100% 100%; height: 500px;width: 100%;">
+<div class="row">
+  <div class="col-md-12 ">
+    <!-- <div class="col-md-6 m-0 p-0 " style="width: 100% ; height: 100%;">
+
+    </div> -->
+    
+
+  </div>
+
+</div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md-12 my-5 ">
+    <h3 class="text-center  mx-3 py-3 " style="background-color: rgb(236, 245, 238);">Machine learning algorithms can detect patterns associated with diseases and health conditions by studying thousands of healthcare records and other patient data.
+
+      Recent developments in machine learning can help increase healthcare access in developing countries and innovate cancer diagnosis and treatment. AI applications in healthcare “can now diagnose skin cancer more accurately than a board-certified dermatologist.” The article points to machine learning’s additional benefits, including diagnostics speed and efficiency and a shorter time frame for training an algorithm versus a human.</h3>
+
+
+
+
+  </div>
+
+</div>
+ 
+
+
+<div class="row  mt-4 ">
+  <div class="col-md-12">
+    <h1 class="text-center py-4 ">Diseases</h1>
+
+  </div>
+  <div class="col-md-10 mx-auto ">
+    <div class="row">
+      <div class="col-md-3  ">
+        <div class="card zoom" style="width: 18rem;">
+          <img src="/static/website_images/breast.jpg" style="height: 100px;width: 100p;" class="card-img-top " alt="">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a href="{% url 'cancer'%}" class="btn btn-success">Breast cancer</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-3  ">
+        <div class="card zoom " style="width: 18rem;">
+          <img src="/static/website_images/diabeates.jpg" style="height: 100px;width: 100p;" class="card-img-top" alt="">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a href="{%url 'diabeates'%}" class="btn btn-success">Diabeates</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-3 ">
+        <div class="card zoom" style="width: 18rem;">
+          <img src="/static/website_images/bmi.png" style="height: 100px;width: 100p;" class="card-img-top" alt="">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a href="{%url 'bmi'%}" class="btn btn-success">BMI</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-3 zoom ">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/website_images/kidney.jpg" style="height: 100px;width: 100p;" class="card-img-top" alt="">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a href="{%url 'kidney'%}" class="btn btn-success">kidney</a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12 my-5">
+
+
+
+  </div>
+
+</div>
+<!-- <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("body").css("background-color", "red");
+    });
+  });
+  </script> -->
+{%endblock%}
